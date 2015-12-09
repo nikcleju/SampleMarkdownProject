@@ -3,12 +3,16 @@ name=Example # name of DocOnce master document
 namemd=$(addsuffix .md, $(name))
 namepdf=$(addsuffix .pdf, $(name))
 namedocx=$(addsuffix .docx, $(name))
+namenative=$(addsuffix .txt, $(name))
+nametest=$(addsuffix _test.pdf, $(name))
 
 all: pdf
 
+test:
+	pandoc -s -S $(namemd) -o $(nametest) --filter TheoremBlock.hs --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
+
 pdf: 
-	echo $(PATH)
-	pandoc -s -S $(namemd) -o $(namepdf)  --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
+	pandoc -s -S $(namemd) -o $(namepdf) --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
 
 beamer:
 	doconce format pdflatex $(name) --latex_title_layout=beamer --latex_admon_title_no_period --latex_code_style=pyg SLIDE_TYPE="beamer"
@@ -28,6 +32,9 @@ mmd:
 docx:
 	doconce format pandoc $(name); 
 	pandoc -s -S $(namemd) -o $(namedocx)
+
+native:
+	pandoc -s -S $(namemd) -t native -o $(namenative)
 
 clean:
 	doconce clean
