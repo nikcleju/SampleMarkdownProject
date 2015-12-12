@@ -4,7 +4,6 @@
 
 import Text.Pandoc.JSON
 
--- 
 checkParagraph :: [Inline]-> Block
 checkParagraph (Strong x:rest)
   | x == [Str("Teoremă.")]  = Div ("mylabel", ["theorem"], []) [Para rest]
@@ -14,12 +13,6 @@ checkParagraph rest = Para rest
 makeTheorem :: Block -> Block
 makeTheorem (Para x)  = checkParagraph x
 makeTheorem x = x
-
-writeTheorem :: Maybe Format -> Block -> Block
-writeTheorem (Just format) (Div (label, classes, otherlist) contents)
-  | format == Format "latex"   = Para [RawInline format
-    $ "salutare " ++ label]
-writeTheorem _ x = x
 
 main :: IO ()
 main = toJSONFilter makeTheorem

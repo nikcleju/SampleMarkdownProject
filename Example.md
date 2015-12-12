@@ -1,3 +1,18 @@
+---
+title:  'My YAML title'
+author:
+- name: Nicolae Cleju
+  affiliation: MY affiliation
+tags: [nothing, nothingness]
+abstract: |
+  This is the abstract.
+
+  It consists of two paragraphs.
+
+header-includes:
+    - \newtheorem{theorem}{Teorema}
+---
+
 # Titlu
 
 ## Achiziția comprimată a semnalelor cu reprezentări rare {#sec:stateart}
@@ -74,6 +89,13 @@ ceea ce contrazice definiţia acestuia.
 Din păcate, calcularea *spark*-ului unei matrici este o problemă de complexitate
 combinatorică, şi deci *NP-hard*, ceea ce limitează aplicabilitatea practică
 a teoremei.
+
+Aici mai vine o teorema, ca sa verific daca numerele sunt puse bine:
+
+**Teoremă.** [@OptimSpReprDonoho2003]: Alta teorema domnule.
+
+_Demonstraţie._ Demonstraţia rezultă imediat, domnule.
+
 
 ### Algoritmi
 

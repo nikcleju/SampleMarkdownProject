@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>My YAML title</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  
+</head>
+<body>
+<div id="header">
+<h1 class="title">My YAML title</h1>
+<h2 class="author">true</h2>
+</div>
+<h1 id="titlu">Titlu</h1>
+<h2 id="sec:stateart">Achiziția comprimată a semnalelor cu reprezentări rare</h2>
+<h3 id="text">Text</h3>
+<p>Am text <em>italic</em> si <strong>bold</strong> si <em>subliniat</em>.</p>
+<h3 id="sec:ecuatii">Ecuații</h3>
+<p>O ecuație inline este <span class="math inline"><em>p</em> ≥ 1</span></p>
+<p>Aici am o ecuație:</p>
+<p><br /><span class="math display">$$
+ \|x\|_p = \left( \sum_i |x_i|^p \right) ^\frac{1}{p}
+\qquad(1)$$</span><br /></p>
+<p>si ma refer la ea ca ecuatia (eq. 1). E <strong>obligatoriu</strong> ca ecuația să fie intr-un paragraf nou (separată cu linii goale inainte și după),</p>
+<p>O listă cu ecuații inline si separate:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">∥<em>a</em><em>x</em>∥=|<em>a</em>|⋅∥<em>x</em>∥</span> (omogenitate)</p></li>
+<li><p>Și încă una aici</p></li>
+</ol>
+<p><br /><span class="math display">∥<em>x</em>∥=0 ⇔ <em>x</em> = 0  (2)</span><br /></p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">∥<em>x</em> + <em>y</em>∥≤∥<em>x</em>∥+∥<em>y</em>∥</span> (inegalitatea triunghiului)</li>
+</ol>
+<p>si o citez pe ultima ca (eq. 2).</p>
+<p>Din păcate, pentru ca trebuie să pun ecuația într-un paragraf nou, <strong>se întrerupe numerotarea</strong>!!</p>
+<p>Și încă o ecuație cu cuvinte în interior (<em>unde</em>) și cazuri (): <br /><span class="math display">$$
+ \|x\|_0 = \sum_{i}^{} c_i, \textrm{ unde } c_i = \begin{cases} 1 , x_i \neq 0 \\ 0 , x_i = 0 \end{cases} 
+$$</span><br /></p>
+<h3 id="figuri">Figuri</h3>
+<p>În Figura 1 sunt înfățișate sferele <span class="math inline">ℓ<sub><em>p</em></sub></span> într-un spațiu bidimensional, adică punctele care au aceeași valoare a normei <span class="math inline">ℓ<sub><em>p</em></sub></span> (aici, egală cu 1), pentru diverse valori ale lui <span class="math inline"><em>p</em></span>. Pentru <span class="math inline"><em>p</em> = 0</span>, domeniul cuprinde doar cele două axe (exceptând punctul 0). Se observă că valori mici ale lui <span class="math inline"><em>p</em></span> implică puncte situate în apropierea celor două axe, funcționând astfel ca niște aproximații ale normei <span class="math inline">ℓ<sub>0</sub></span>.</p>
+<div class="figure">
+<img src="lpnorms.png" title="Optional title" alt="Figura 1 - Punctele dintr-un plan care au norma \ell_p egală cu 1" />
+<p class="caption">Figura 1 - Punctele dintr-un plan care au norma <span class="math inline">ℓ<sub><em>p</em></sub></span> egală cu 1</p>
+</div>
+<h3 id="teoreme-definiții-citari">Teoreme, definiții, citari</h3>
+<p>Definiție ca text:</p>
+<p><strong>Definiţie.</strong> <span class="citation">[1]</span>: Fie matricea <span class="math inline"><em>A</em> ∈ ℝ<sup><em>m</em> × <em>n</em></sup></span>. <em>Spark</em>-ul matricii <span class="math inline"><em>A</em></span>, notat <span class="math inline"><em>σ</em></span>, reprezintă numărul minim de coloane ale lui <span class="math inline"><em>A</em></span> care sunt liniar independente.</p>
+<p>Următoarea este o teoremă cu demonstrație, ca text:</p>
+<dt>Teorema 1</dt>
+<dd>
+<p> <span class="citation">[1]</span>: Fie <span class="math inline"><em>γ</em></span> un vector rar cu <span class="math inline">∥<em>γ</em>∥<sub>0</sub> = <em>k</em></span>, achiziţionat cu o matrice <span class="math inline"><em>A</em></span> ca în (eq. 1). Fie <span class="math inline"><em>σ</em></span> <em>spark</em>-ul matricii <span class="math inline"><em>A</em></span>. Dacă <span class="math inline"><em>k</em> &lt; <em>σ</em>/2</span>, atunci <span class="math inline"><em>γ</em></span> este soluţie unică a problemei de optimizare (eq. 2).</p>
+</dd>
+</dl>
+<p><em>Demonstraţie.</em> Demonstraţia rezultă imediat: dacă (eq. 1) ar admite o soluţie diferită, cu raritatea <span class="math inline"><em>k</em>′≤<em>k</em></span>, atunci diferenţa celor două soluţii ar produce un vector de raritate <span class="math inline">(<em>k</em>′+<em>k</em>)&lt;<em>σ</em></span> care aparţine spaţiului nul al matricii <span class="math inline"><em>A</em></span>. Acest lucru înseamnă un set de coloane liniar independente ale lui <span class="math inline"><em>A</em></span> în număr mai mic decât <em>spark</em>-ul matricii, ceea ce contrazice definiţia acestuia.</p>
+<p>Din păcate, calcularea <em>spark</em>-ului unei matrici este o problemă de complexitate combinatorică, şi deci <em>NP-hard</em>, ceea ce limitează aplicabilitatea practică a teoremei.</p>
+<p>Aici mai vine o teorema, ca sa verific daca numerele sunt puse bine:</p>
+<dt>Teorema 2</dt>
+<dd>
+<p> <span class="citation">[1]</span>: Alta teorema domnule.</p>
+</dd>
+</dl>
+<p><em>Demonstraţie.</em> Demonstraţia rezultă imediat, domnule.</p>
+<h3 id="algoritmi">Algoritmi</h3>
+<p><strong>Algoritmul Orthogonal Matching Pursuit (OMP)</strong></p>
+<p><em>Fenced clode block</em>:</p>
+<pre><code>   1. $r^{(0)} \leftarrow y$
+   2. $\gamma_i \leftarrow 0, \forall i$
+   3. repetă:  
+       3.1.    Găsește $a_m \in A$ cu coeficientul de corelația maxim $\left\langle r^{(k)}, a_m \right\rangle$  
+       3.2.    Adaugă $m$ la setul indicilor atomilor selectați, $T \leftarrow T \cup \{m\}$  
+       3.3.    Proiectează $x$ pe subspațiul atomilor $a_{\{T\}}$, obținând vectorul coeficienților de la pasul $k$: $\gamma_{\{T\}}^{(k+1)} = a_{\{T\}}^{\dagger} x$  
+       3.4.    Actualizează reziduul: $r^{(k+1)} \leftarrow x - A \cdot \gamma^{(k+1)}$
+   4. până la un criteriu de oprire (de ex. $\|r^{(k)}\|_2 \le \epsilon$, sau număr fixat de iterații}  </code></pre>
+<p>sau <em>clode block</em> normal (cu 4 spații):</p>
+<pre><code>1. $r^{(0)} \leftarrow y$
+2. $\gamma_i \leftarrow 0, \forall i$
+3. repetă:  
+    3.1.    Găsește $a_m \in A$ cu coeficientul de corelația maxim $\left\langle r^{(k)}, a_m \right\rangle$  
+    3.2.    Adaugă $m$ la setul indicilor atomilor selectați, $T \leftarrow T \cup \{m\}$  
+    3.3.    Proiectează $x$ pe subspațiul atomilor $a_{\{T\}}$, obținând vectorul coeficienților de la pasul $k$: $\gamma_{\{T\}}^{(k+1)} = a_{\{T\}}^{\dagger} x$  
+    3.4.    Actualizează reziduul: $r^{(k+1)} \leftarrow x - A \cdot \gamma^{(k+1)}$
+4. până la un criteriu de oprire (de ex. $\|r^{(k)}\|_2 \le \epsilon$, sau număr fixat de iterații}  </code></pre>
+<p>Din păcate, în <em>code blocks</em> nu se parsează ecuațiile Latex. Singura soluție este să le scriu ca liste obișnuite (de ex. cu 3 spații):</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline"><em>r</em><sup>(0)</sup> ← <em>y</em></span></li>
+<li><span class="math inline"><em>γ</em><sub><em>i</em></sub> ← 0, ∀<em>i</em></span></li>
+<li>repetă:<br />
+ 3.1. Găsește <span class="math inline"><em>a</em><sub><em>m</em></sub> ∈ <em>A</em></span> cu coeficientul de corelația maxim <span class="math inline">⟨<em>r</em><sup>(<em>k</em>)</sup>,<em>a</em><sub><em>m</em></sub>⟩</span><br />
+ 3.2. Adaugă <span class="math inline"><em>m</em></span> la setul indicilor atomilor selectați, <span class="math inline"><em>T</em> ← <em>T</em> ∪ {<em>m</em>}</span><br />
+ 3.3. Proiectează <span class="math inline"><em>x</em></span> pe subspațiul atomilor <span class="math inline"><em>a</em><sub>{<em>T</em>}</sub></span>, obținând vectorul coeficienților de la pasul <span class="math inline"><em>k</em></span>: <span class="math inline"><em>γ</em><sub>{<em>T</em>}</sub><sup>(<em>k</em> + 1)</sup> = <em>a</em><sub>{<em>T</em>}</sub><sup>†</sup><em>x</em></span><br />
+ 3.4. Actualizează reziduul: <span class="math inline"><em>r</em><sup>(<em>k</em> + 1)</sup> ← <em>x</em> − <em>A</em> ⋅ <em>γ</em><sup>(<em>k</em> + 1)</sup></span></li>
+<li>până la un criteriu de oprire (de ex. <span class="math inline">∥<em>r</em><sup>(<em>k</em>)</sup>∥<sub>2</sub> ≤ <em>ϵ</em></span>, sau număr fixat de iterații}</li>
+</ol>
+<h3 id="tabele">Tabele</h3>
+<p>TODO</p>
+<div id="refs" class="references">
+<div id="ref-OptimSpReprDonoho2003">
+<p>[1] D. L. Donoho and M. Elad, “Optimally sparse representation in general (nonorthogonal) dictionaries via l1 minimization,” <em>Proceedings of the National Academy of Sciences</em>, vol. 100, no. 5, pp. 2197–2202, 2003.</p>
+</div>
+</div>
+</body>
+</html>

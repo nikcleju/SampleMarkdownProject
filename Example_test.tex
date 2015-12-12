@@ -25,6 +25,7 @@
 \usepackage{hyperref}
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 \hypersetup{unicode=true,
+            pdftitle={My YAML title},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
@@ -44,7 +45,10 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{0}
 
+\title{My YAML title}
+\author{true}
 \date{}
+\newtheorem{theorem}{Teorema}
 \AtBeginDocument{%
 \renewcommand*\figurename{Figure}
 \renewcommand*\tablename{Table}
@@ -72,6 +76,12 @@
 \fi
 
 \begin{document}
+\maketitle
+\begin{abstract}
+This is the abstract.
+
+It consists of two paragraphs.
+\end{abstract}
 
 \section{Titlu}\label{titlu}
 
@@ -153,12 +163,15 @@ liniar independente.
 
 Următoarea este o teoremă cu demonstrație, ca text:
 
-\hypertarget{mylabel}{}
+\begin{theorem}
+
 {[}1{]}: Fie \(\gamma\) un vector rar cu \(\|\gamma\|_0 = k\),
 achiziţionat cu o matrice \(A\) ca în (eq.~\ref{eq:ec1}). Fie \(\sigma\)
 \emph{spark}-ul matricii \(A\). Dacă \(k < \sigma / 2\), atunci
 \(\gamma\) este soluţie unică a problemei de optimizare
 (eq.~\ref{eq:ec2}).
+
+\end{theorem}
 
 \emph{Demonstraţie.} Demonstraţia rezultă imediat: dacă
 (eq.~\ref{eq:ec1}) ar admite o soluţie diferită, cu raritatea
@@ -171,6 +184,16 @@ contrazice definiţia acestuia.
 Din păcate, calcularea \emph{spark}-ului unei matrici este o problemă de
 complexitate combinatorică, şi deci \emph{NP-hard}, ceea ce limitează
 aplicabilitatea practică a teoremei.
+
+Aici mai vine o teorema, ca sa verific daca numerele sunt puse bine:
+
+\begin{theorem}
+
+{[}1{]}: Alta teorema domnule.
+
+\end{theorem}
+
+\emph{Demonstraţie.} Demonstraţia rezultă imediat, domnule.
 
 \subsubsection{Algoritmi}\label{algoritmi}
 
