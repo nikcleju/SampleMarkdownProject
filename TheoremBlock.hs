@@ -5,12 +5,14 @@
 
 import Text.Pandoc.JSON
 
-checkParagraph :: [Inline] -> [Inline]
-checkParagraph (Strong x:rest) = rest
-checkParagraph rest = rest
+checkParagraph :: [Inline] -> Block
+checkParagraph (Strong x:rest)
+  | x == [Str("Teoremă.")]  = Div ("mylabel", ["theorem"], []) [Para rest]  --Str("HeiSalut") : rest
+  | otherwise       = Para (Strong x:rest)
+checkParagraph rest = Para rest
 
 makeTheorem :: Block -> Block
-makeTheorem (Para x)  = Para (checkParagraph x)
+makeTheorem (Para x)  = checkParagraph x
 makeTheorem x = x
 
 main :: IO ()

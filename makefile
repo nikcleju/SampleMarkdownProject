@@ -5,11 +5,20 @@ namepdf=$(addsuffix .pdf, $(name))
 namedocx=$(addsuffix .docx, $(name))
 namenative=$(addsuffix .txt, $(name))
 nametest=$(addsuffix _test.pdf, $(name))
+nametesttex=$(addsuffix _test.tex, $(name))
+nametestnative=$(addsuffix _test.txt, $(name))
 
 all: pdf
 
 test:
+	pandoc -s -S $(namemd) -t native -o $(nametestnative) --filter TheoremBlock.hs --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
+	pandoc -s -S $(namemd) -o $(nametesttex) --filter TheoremBlock.hs --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
 	pandoc -s -S $(namemd) -o $(nametest) --filter TheoremBlock.hs --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
+
+testpy:
+	pandoc -s -S $(namemd) -t native -o $(nametestnative) --filter ./TheoremBlock.py
+	pandoc -s -S $(namemd) -o $(nametesttex) --filter ./TheoremBlock.py --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
+	pandoc -s -S $(namemd) -o $(nametest) --filter ./TheoremBlock.py --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
 
 pdf: 
 	pandoc -s -S $(namemd) -o $(namepdf) --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
