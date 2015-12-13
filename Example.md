@@ -77,7 +77,13 @@ Următoarea este o teoremă cu demonstrație, ca text:
 **Teoremă.** [@OptimSpReprDonoho2003]: Fie $\gamma$ un vector rar cu 
 $\|\gamma\|_0 = k$, achiziţionat cu o matrice $A$ ca în (@eq:ec1).
 Fie $\sigma$ *spark*-ul matricii $A$. Dacă $k < \sigma / 2$, atunci $\gamma$
-este soluţie unică a problemei de optimizare (@eq:ec2).
+este soluţie unică a problemei de optimizare (@eq:ec2). Mai pun aici si o ecuatie intr-un paragraf nou:
+
+$$
+ \|x\|_p = \left( \sum_i |x_i|^p \right) ^\frac{1}{p}
+$$ {#eq:ec1}
+
+ca sa fie totul bine.**End.**
 
 _Demonstraţie._ Demonstraţia rezultă imediat: dacă (@eq:ec1)
 ar admite o soluţie diferită, cu raritatea $k' \leq k$, atunci diferenţa
@@ -92,7 +98,7 @@ a teoremei.
 
 Aici mai vine o teorema, ca sa verific daca numerele sunt puse bine:
 
-**Teoremă.** [@OptimSpReprDonoho2003]: Alta teorema domnule.
+**Teoremă.** [@OptimSpReprDonoho2003]: Alta teorema domnule.**End.**
 
 _Demonstraţie._ Demonstraţia rezultă imediat, domnule.
 

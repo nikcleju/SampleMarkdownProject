@@ -12,10 +12,13 @@ nametesthtml=$(addsuffix _test.html, $(name))
 all: pdf
 
 test:
-	pandoc -s -S $(namemd) -t native -o $(nametestnative) --filter ./TheoremBlock.hs --filter ./WriteTheoremBlock.hs --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
-	pandoc -s -S $(namemd) -o $(nametesttex) --filter ./TheoremBlock.hs --filter ./WriteTheoremBlock.hs --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
-	pandoc -s -S $(namemd) -o $(nametest) --filter ./TheoremBlock.hs --filter ./WriteTheoremBlock.hs --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
-	pandoc -s -S $(namemd) -o $(nametesthtml) --filter ./TheoremBlock.hs --filter ./WriteTheoremBlock.hs --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
+#	pandoc -s -S $(namemd) -t native -o $(nametestnative) --filter ./TheoremBlock.hs --filter ./WriteTheoremBlock.hs --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
+#	pandoc -s -S $(namemd) -o $(nametesttex) --filter ./TheoremBlock.hs --filter ./WriteTheoremBlock.hs --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
+#	pandoc -s -S $(namemd) -o $(nametest) --filter ./TheoremBlock.hs --filter ./WriteTheoremBlock.hs --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
+#	pandoc -s -S $(namemd) -o $(nametesthtml) --filter ./TheoremBlock.hs --filter ./WriteTheoremBlock.hs --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
+	pandoc -s -S $(namemd) -t native -o $(nametestnative) --filter ./makeDivs.hs --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
+	pandoc -s -S $(namemd) -o $(nametesttex) --filter ./makeDivs.hs --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
+	pandoc -s -S $(namemd) -o $(nametest) --filter ./makeDivs.hs --filter pandoc-crossref --bibliography=Biblio_UTF8.bib --csl=ieee.csl
 
 
 testpy:
